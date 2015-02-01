@@ -26,12 +26,14 @@ fi
 ## env variables
 
 # Java home
-export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+export JAVA_HOME=/usr/lib/jvm/java-7-oracle
 # maven home
-export M2_HOME=~/bin/apache-maven-3.2.5
+export M2_HOME=/usr/share/maven
 # go
 export GOROOT=~/bin/go
 export GOPATH=~/bin/go-home
+# leiningen
+export LEIN_JAVA_CMD=/usr/lib/jvm/java-8-oracle/bin/java
 
 ## PATH
 for dir in ~/bin/*/bin
