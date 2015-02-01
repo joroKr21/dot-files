@@ -28,8 +28,15 @@ BMAG="\[\033[00;45m\]" # background magenta
 BCYN="\[\033[00;46m\]" # background cyan
 BWHT="\[\033[00;47m\]" # background white
 
+# Prompts
 FROOT=$FRED
 FUSER=$FMAG
 FHOST=$FMAG
 FPATH=$FYEL
-PROMPT=$'\u276D'
+UCHAR=$'\n\u03BB.'
+RCHAR=$'\n#'
+PUSER="$FGRN$UCHAR"
+PROOT="$FRED$RCHAR"
+
+USER_PROMPT="$FUSER\u$FWHT@$FHOST\h$FWHT:$FPATH\w$PUSER$RS "
+ROOT_PROMPT="$FROOT\u$FWHT@$FHOST\h$FWHT:$FPATH\w$PROOT$RS "
