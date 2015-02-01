@@ -64,9 +64,9 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1="${debian_chroot:+($debian_chroot)}$FUSER\u$RS@$FHOST\h\[\033[00m\]:$FPATH\w\[\033[00m\]$PROMPT "
+    PS1="${debian_chroot:+($debian_chroot)}$USER_PROMPT"
 else
-    PS1="${debian_chroot:+($debian_chroot)}\u@\h:\w$PROMPT "
+    PS1="${debian_chroot:+($debian_chroot)}\u@\h:\w$UCHAR "
 fi
 unset color_prompt force_color_prompt
 
