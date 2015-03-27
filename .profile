@@ -23,24 +23,19 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
-## env variables
-
-# Java home
-export JAVA_HOME=/usr/lib/jvm/java-7-oracle
-# maven home
-export M2_HOME=/usr/share/maven
-# go
-export GOROOT=~/bin/go
-export GOPATH=~/bin/go-home
-# leiningen
-export LEIN_JAVA_CMD=/usr/lib/jvm/java-8-oracle/bin/java
+for script in ~/.scripts/*.sh
+do
+    source $script
+done
 
 ## PATH
 for dir in ~/bin/*/bin
 do
-	PATH=$PATH:$dir
+    PATH=$PATH:$dir
 done
+
+export PATH
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
