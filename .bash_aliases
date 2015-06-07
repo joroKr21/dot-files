@@ -1,9 +1,10 @@
 #!/bin/sh
 
 # Clojure
-alias clojure="java -cp ~/work/lib/clojure-1.6.0/clojure-1.6.0.jar clojure.main"
-alias clj=clojure
+alias clj="java -cp $HOME/work/lib/clojure-1.6.0/clojure-1.6.0.jar:$HOME/work/lib/jline-0.9.94/jline-0.9.94.jar jline.ConsoleRunner clojure.main"
+alias clojure=clj
 # maven
+alias maven=/usr/share/maven/bin/mvn
 alias mvn=color-mvn
 # LightTable
 alias ltab="~/bin/LightTable/LightTable &> /dev/null"
@@ -16,3 +17,7 @@ alias python2=/usr/bin/python
 alias python=python3
 alias py2=python2
 alias py=python
+# Node.js
+alias nodejs=node
+# MongoDB
+alias mongodb="mongod --config ~/.config/mongodb/mongo.conf"

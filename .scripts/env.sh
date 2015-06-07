@@ -1,16 +1,18 @@
 #!/bin/sh
 
 ## env variables
-# Java home
+# Java
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle
-# maven home
+unset JAVA_TOOL_OPTIONS
+# Maven
 export M2_HOME=/usr/share/maven
-# go
+export MAVEN_OPTS="-Xmx512m"
+# Go
 export GOROOT=~/bin/go
 export GOPATH=~/bin/go-home
-# leiningen
+# Leiningen
 export LEIN_JAVA_CMD=/usr/lib/jvm/java-8-oracle/bin/java
-# maven
-export MAVEN_OPTS="-Xmx512m"
 # Hadoop
 export HADOOP_HOME=~/bin/hadoop-2.6.0
+# Node.js
+export NVM_SYMLINK_CURRENT=true
