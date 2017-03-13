@@ -5,3 +5,7 @@
 	helper = cache --timeout=3600
 [push]
 	default = simple
+[diff]
+    tool = meld
+[merge]
+	tool = meld

@@ -1,23 +1,21 @@
 #!/bin/sh
 
 # Clojure
-alias clj="java -cp $HOME/work/lib/clojure-1.6.0/clojure-1.6.0.jar:$HOME/work/lib/jline-0.9.94/jline-0.9.94.jar jline.ConsoleRunner clojure.main"
+alias clj="java -cp $LIB_DIR/clojure-1.7.0/clojure-1.7.0.jar:$LIB_DIR/jline-0.9.94/jline-0.9.94.jar jline.ConsoleRunner clojure.main"
 alias clojure=clj
-# maven
-alias maven=/usr/share/maven/bin/mvn
-alias mvn=color-mvn
-# LightTable
-alias ltab="~/bin/LightTable/LightTable &> /dev/null"
-# IntelliJ IDEA
-alias idea="idea.sh &> /dev/null & disown"
-alias intellij=idea
-alias freevpnme="sudo openvpn --config ~/bin/openvpn/FreeVPN.me-TCP443.ovpn"
-# Python
-alias python2=/usr/bin/python
-alias python=python3
-alias py2=python2
-alias py=python
+# Scala
+alias scala="scala -Dscala.color"
+alias scala-style-11="java -jar $LIB_DIR/scalastyle/scalastyle_2.11-0.8.0-batch.jar"
+alias scala-style-10="java -jar $LIB_DIR/scalastyle/scalastyle_2.10-0.8.0-batch.jar"
+alias scala-style=scala-style-11
 # Node.js
 alias nodejs=node
 # MongoDB
 alias mongodb="mongod --config ~/.config/mongodb/mongo.conf"
+# Redis
+alias redis-cli="$REDIS_HOME/src/redis-cli"
+alias redis-server="$REDIS_HOME/src/redis-server"
+# Kashell
+alias kash="~/bin/kash3/kash3 -l ~/bin/kash3/lib"
+# WLAN
+alias refresh-wlan="sudo iwlist wlp2s0 scan"

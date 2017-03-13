@@ -125,3 +125,16 @@ export NVM_DIR="/home/georgy/.nvm"
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
+
+# added by Anaconda3 2.4.0 installer
+export PATH="/home/georgy/bin/anaconda3/bin:$PATH"
+
+# added by travis gem
+[ -f /home/georgy/.travis/travis.sh ] && source /home/georgy/.travis/travis.sh
+
+# Stack auto-completion
+eval "$(stack --bash-completion-script stack)"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/georgy/.sdkman"
+[[ -s "/home/georgy/.sdkman/bin/sdkman-init.sh" ]] && source "/home/georgy/.sdkman/bin/sdkman-init.sh"
